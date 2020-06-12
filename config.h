@@ -63,8 +63,10 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument */
-	{ datetime, "D%s\n",           "cw %V, %A, %F %H:%M" },
-    { load_avg, "Lload %s\n",      NULL                  },
-    { ram_free, "Mmem %s free\n",  NULL                  },
-    { temp,     "Ttemp %s°C\n",    "/sys/class/thermal/thermal_zone1/temp"},
+	{ datetime,    "D%s\n",           "CW %V, %A, %F %H:%M" },
+    { load_avg,    "Lload %s\n",      NULL                  },
+    { ram_free,    "Mmem %s free\n",  NULL                  },
+    { temp,        "Ttemp %s°C\n",    "/sys/class/thermal/thermal_zone1/temp"},
+    { run_command, "Nmail %s",        "notmuch count tag:work and tag:inbox and tag:unread" },
+    { run_command, "/%s\n",           "notmuch count tag:private and tag:inbox and tag:unread" },
 };

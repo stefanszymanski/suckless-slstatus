@@ -66,6 +66,6 @@ static const struct arg args[] = {
 	{ datetime,    "D%s\n",           "CW %V, %A, %F %H:%M" },
     { load_avg,    "Lload %s\n",      NULL                  },
     { ram_free,    "Mmem %s free\n",  NULL                  },
-    { temp,        "Ttemp %s°C\n",    "/sys/class/thermal/thermal_zone1/temp"},
+    { run_command, "Ttemp %s\n",      "temp panel"          },
     { run_command, "Nmail %s",        "notmuch count tag:inbox and tag:unread" },
 };

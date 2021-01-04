@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* interval between updates (in ms) */
-const unsigned int interval = 2000;
+const unsigned int interval = 5000;
 
 /* text to show if no value can be retrieved */
 static const char unknown_str[] = "n/a";
@@ -64,8 +64,8 @@ static const char unknown_str[] = "n/a";
 static const struct arg args[] = {
 	/* function format          argument */
 	{ datetime,    "D%s\n",           "CW %V, %A, %F %H:%M" },
-    { load_avg,    "Lload %s\n",      NULL                  },
+    { load_avg,    "L%s\n",      NULL                  },
     { ram_free,    "Mmem %s free\n",  NULL                  },
-    { run_command, "Ttemp %s\n",      "de-temp panel"          },
+    { run_command, "T%s\n",      "de-temp panel"          },
     { run_command, "Nmail %s",        "notmuch count tag:inbox and tag:unread" },
 };
